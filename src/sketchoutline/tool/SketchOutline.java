@@ -30,33 +30,35 @@
 
 package sketchoutline.tool;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
-import processing.app.*;
-import processing.app.tools.*;
+import processing.app.Base;
+import processing.app.tools.Tool;
+import processing.app.ui.Editor;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * The main class for the tool.
  */
 public class SketchOutline implements Tool {
 
-	Editor editor;
+	private Base base;
 
 	public String getMenuTitle() {
 		return "Sketch Outline";
 	}
 
-	public void init(Editor theEditor) {
-		editor = theEditor;
+	private SketchOutlineFrame frame;
 
+	@Override
+	public void init(Base base) {
+		this.base = base;
 	}
 
-	SketchOutlineFrame frame;
-	TreeMaker treemaker;
-
 	public void run() {
+		final Editor editor = base.getActiveEditor();
 
-		System.out.println("Sketch Outline 0.1.7 (beta)");
+		System.out.println("Sketch Outline 0.1.8 (beta)");
 		System.out.println("By - Manindra Moharana | http://www.mkmoharana.com/");
 		String mode = editor.getMode().getTitle();
 		if (mode.equals("Android") || mode.equals("JavaScript")) {
@@ -67,24 +69,22 @@ public class SketchOutline implements Tool {
 		}
 		try {
 
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						if (frame == null || frame.thTreeMaker.treeMaker.basicMode) {
-							frame = new SketchOutlineFrame(editor);							
-						}						
-						
-						
-						if (frame.okToShowFrame)						
-							frame.setVisible(true);
-						frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			EventQueue.invokeLater(() -> {
+				try {
+					if (frame == null || frame.thTreeMaker.treeMaker.basicMode) {
+						frame = new SketchOutlineFrame(editor);
+					}
 
-					} catch (Exception e) {
 
-						if (TreeMaker.debugMode) {
-							System.err.println("Exception at Tool.run()");
-							e.printStackTrace();
-						}
+					if (frame.okToShowFrame)
+						frame.setVisible(true);
+					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+				} catch (Exception e) {
+
+					if (TreeMaker.debugMode) {
+						System.err.println("Exception at Tool.run()");
+						e.printStackTrace();
 					}
 				}
 			});

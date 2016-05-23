@@ -29,13 +29,15 @@
  */
 package sketchoutline.tool;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.TreeSet;
+import processing.app.ui.Editor;
 
 import javax.swing.*;
-import javax.swing.tree.*;
-import processing.app.Editor;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreePath;
+
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /**
  * Implements {@link TreeMaker} using multi threading. Used for the auto refresh

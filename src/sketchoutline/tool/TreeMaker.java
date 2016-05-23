@@ -40,6 +40,7 @@ import java.util.regex.*;
 import javax.swing.tree.*;
 
 import processing.app.*;
+import processing.app.ui.Editor;
 import processing.core.*;
 
 /**
@@ -594,11 +595,11 @@ public class TreeMaker {
 										sc.getDocument().getLength()), '\n');
 						// System.out.println("Getting from document "
 						// + sc.getLineCount() + "," + lines.length);
-						len = Base.countLines(sc.getDocument().getText(0,
+						len = Util.countLines(sc.getDocument().getText(0,
 								sc.getDocument().getLength())) + 1;
 					} else {
 						lines = PApplet.split(sc.getProgram(), '\n');
-						len = Base.countLines(sc.getProgram()) + 1;
+						len = Util.countLines(sc.getProgram()) + 1;
 					}
 
 					// Adding + 1 to len because \n gets appended for each
@@ -898,7 +899,7 @@ public class TreeMaker {
 	/**
 	 * Returns the type of Node as String
 	 * 
-	 * @param Node
+	 * @param node
 	 *            - The input Node
 	 * 
 	 * @return String - The type of Node
@@ -918,7 +919,7 @@ public class TreeMaker {
 	/**
 	 * Returns the type of TmNode as String
 	 * 
-	 * @param Node
+	 * @param node
 	 *            - The input TmNode
 	 * 
 	 * @return String - The type of Node
@@ -1465,7 +1466,7 @@ public class TreeMaker {
 	/**
 	 * Wrapper class to the Node class provided by japa parser. Adds some more
 	 * members required within {@link TreeMaker}. The original node object is
-	 * retained. Used as userObjects in tree nodes of {@link TreeMaker.codeTree}
+	 * retained. Used as userObjects in tree nodes of {@link #codeTree}
 	 */
 	public class TmNode implements Comparable {
 		public Node node;

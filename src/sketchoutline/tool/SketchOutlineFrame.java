@@ -30,18 +30,22 @@
 
 package sketchoutline.tool;
 
+import processing.app.Base;
+import processing.app.ui.Editor;
+import processing.app.ui.Toolkit;
+import sketchoutline.tool.TreeMaker.TmNode;
+
+import javax.swing.*;
+import javax.swing.event.TreeExpansionEvent;
+import javax.swing.event.TreeExpansionListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.net.URL;
-import javax.swing.*;
-import javax.swing.tree.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.event.*;
-
-import processing.app.*;
-import processing.app.Toolkit;
-import sketchoutline.tool.TreeMaker.TmNode;
 
 /**
  * The Main GUI of the Sketch Outline Tool.
@@ -52,11 +56,9 @@ public class SketchOutlineFrame extends JFrame {
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	public JTree tree;
-	// TreeMaker treeMaker = null;
 	ThreadedTreeMaker thTreeMaker = null;
-	Editor editor;
-	int offset;
-	TreePath lastpath;
+	private Editor editor;
+	private TreePath lastpath;
 	private JCheckBox chkbxAutoUpdate;
 	private JButton btnRefresh;
 	boolean okToShowFrame = false;
@@ -65,18 +67,16 @@ public class SketchOutlineFrame extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					// TreeMaker tm = new TreeMaker(TreeMaker.PATH);
-					UIManager.setLookAndFeel(UIManager
-							.getSystemLookAndFeelClassName());
-					SketchOutlineFrame frame = new SketchOutlineFrame(null);
-					frame.setVisible(true);
-					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		EventQueue.invokeLater(() -> {
+			try {
+				// TreeMaker tm = new TreeMaker(TreeMaker.PATH);
+				UIManager.setLookAndFeel(UIManager
+						.getSystemLookAndFeelClassName());
+				SketchOutlineFrame frame = new SketchOutlineFrame(null);
+				frame.setVisible(true);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		});
 	}
@@ -252,8 +252,8 @@ public class SketchOutlineFrame extends JFrame {
 			// " - "
 			// + tn.node.getBeginLine());
 
-			offset = thTreeMaker.treeMaker.xyToOffset(tn.node.getBeginLine()
-					- thTreeMaker.treeMaker.mainClassLineOffset,
+			int offset = thTreeMaker.treeMaker.xyToOffset(tn.node.getBeginLine()
+							- thTreeMaker.treeMaker.mainClassLineOffset,
 					tn.node.getBeginColumn());
 			// =
 			// editor.getTextArea().xyToOffset(tn.node.getBeginLine()-
@@ -670,7 +670,6 @@ public class SketchOutlineFrame extends JFrame {
 
 				+ File.separator + "tools" + File.separator + "SketchOutline"
 						+ File.separator + "data" + File.separator + "icons";
-				;
 			}
 			// File[] iconfiles = f.listFiles();
 			// if (iconfiles.length != 15)
