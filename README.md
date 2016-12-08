@@ -21,6 +21,4 @@ Grab the latest version from [here](https://github.com/Simplifier/Sketch-Outline
 5. Restart Processing.
 
 ------------------------------------------------------------------------------------
-Participate in the discussion on the [Processing forum thread](https://forum.processing.org/topic/sketch-outline-new-processing-tool-announcement)
-<br>
-Switched to GitHub now from [google code](http://code.google.com/p/sketch-outline/).
+Participate in the discussion on the [Processing forum thread](https://forum.processing.org/two/discussion/19611/view-code-structure-tool)
