@@ -1,6 +1,6 @@
 ## Sketch Outline for PDE (Processing Development Environment)
 
-##### This repo is a fork of original [Sketch Outline for PDE](https://github.com/Manindra29/Sketch-Outline), rebuilt to be compatible with Processing 3.
+##### This repo is a fork of original [Sketch Outline for PDE](https://github.com/Manindra29/Sketch-Outline), rebuilt in order to be compatible with Processing 3.
 -----------------------------------------------------------
 
 Sketch Outline is a [Processing](http://www.processing.org) tool that provides an outline view of the member variables, functions and classes within a sketch and allows easy navigation between them. 
