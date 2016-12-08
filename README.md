@@ -1,6 +1,6 @@
 ## Sketch Outline for PDE (Processing Development Environment)
 
-##### This repo is a fork of original [Sketch Outline for PDE](https://github.com/Manindra29/Sketch-Outline), rebuilt to be compatible with Processing 3.
+##### This repo is a fork of original [Sketch Outline for PDE](https://github.com/Manindra29/Sketch-Outline), rebuilt in order to be compatible with Processing 3.
 -----------------------------------------------------------
 
 Sketch Outline is a [Processing](http://www.processing.org) tool that provides an outline view of the member variables, functions and classes within a sketch and allows easy navigation between them. 
@@ -8,7 +8,7 @@ Similar to the outline view in Eclipse.
 Grab the latest version from [here](https://github.com/Simplifier/Sketch-Outline/tree/master/distribution).
 
 <br/>
-![Sketch Outline v0.1.8](https://lh6.googleusercontent.com/-z5238q7xFq4/UMmf9i3uaFI/AAAAAAAABCU/oPe2byj8Q6k/s539/SO_scr1.png)
+![Sketch Outline v0.2.0](https://api.monosnap.com/rpc/file/download?id=wIupHwHhiiMf8MBg0TtV5lAUJ5Cjba)
 <br/>
 
 
