@@ -8,7 +8,7 @@ Similar to the outline view in Eclipse.
 Grab the latest version from [here](https://github.com/Simplifier/Sketch-Outline/tree/master/distribution).
 
 <br/>
-![Sketch Outline v0.2.0](https://api.monosnap.com/rpc/file/download?id=4XrXrVRkLqPmXQRpXVMafuSs7Qq1Y1)
+![Sketch Outline v0.2.0](https://api.monosnap.com/rpc/file/download?id=VtE9Kj5US485qFGgDL2hRbBYfGetbt)
 <br/>
 
 
