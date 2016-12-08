@@ -48,8 +48,6 @@ public class SketchOutline implements Tool {
 		return "Sketch Outline";
 	}
 
-	private SketchOutlineFrame frame;
-
 	@Override
 	public void init(Base base) {
 		this.base = base;
@@ -58,8 +56,9 @@ public class SketchOutline implements Tool {
 	public void run() {
 		final Editor editor = base.getActiveEditor();
 
-		System.out.println("Sketch Outline 0.1.8 (beta)");
-		System.out.println("By - Manindra Moharana | http://www.mkmoharana.com/");
+		System.out.println("Sketch Outline 0.2.0 (beta)");
+		System.out.println("By - Manindra Moharana | http://www.mkmoharana.com/ and Alexander Kravchenko");
+
 		String mode = editor.getMode().getTitle();
 		if (mode.equals("Android") || mode.equals("JavaScript")) {
 			System.out
@@ -71,14 +70,18 @@ public class SketchOutline implements Tool {
 
 			EventQueue.invokeLater(() -> {
 				try {
-					if (frame == null || frame.thTreeMaker.treeMaker.basicMode) {
-						frame = new SketchOutlineFrame(editor);
+					if (!hasEditorOutline(editor)) {
+						Container panel = editor.getTextArea().getParent();
+
+						SketchOutlinePanel outline = new SketchOutlinePanel(editor);
+						JSplitPane sp = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, editor.getTextArea(), outline);
+						sp.setContinuousLayout(true);
+						sp.setResizeWeight(1D);
+						panel.add(sp);
+						editor.rebuildHeader();
+
+						outline.btnClose.addActionListener(e -> closeOutline(outline));
 					}
-
-
-					if (frame.okToShowFrame)
-						frame.setVisible(true);
-					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 				} catch (Exception e) {
 
@@ -94,6 +97,25 @@ public class SketchOutline implements Tool {
 				e2.printStackTrace();
 		}
 
+	}
+
+	private void closeOutline(SketchOutlinePanel outline){
+		Editor editor = outline.getEditor();
+		Container splitPane = editor.getTextArea().getParent();
+		Container panel = splitPane.getParent();
+
+		panel.remove(splitPane);
+		panel.add(editor.getTextArea());
+		editor.rebuildHeader();
+	}
+
+	private boolean hasEditorOutline(Editor editor) {
+		for (Component child : editor.getTextArea().getParent().getComponents()) {
+			if(child instanceof SketchOutlinePanel) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

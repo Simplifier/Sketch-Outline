@@ -44,7 +44,7 @@ import java.util.TreeSet;
  * functionality. The code tree is rebuilt every few seconds and this process
  * takes place in a separate thread so the the main editor thread focuses solely
  * on the editor and its performance isn't affected. Used by
- * {@link SketchOutlineFrame}
+ * {@link SketchOutlinePanel}
  * 
  */
 public class ThreadedTreeMaker implements Runnable {
@@ -56,7 +56,7 @@ public class ThreadedTreeMaker implements Runnable {
 	 */
 	boolean stop = false;
 	Thread thread;
-	SketchOutlineFrame frame = null;
+	SketchOutlinePanel frame = null;
 	TreePath lastpath = null;
 	public int lastRow = -1;
 	public final int fastTime = 1000, slowSleep = 3000;
@@ -185,13 +185,13 @@ public class ThreadedTreeMaker implements Runnable {
 
 	}
 
-	public ThreadedTreeMaker(SketchOutlineFrame frame, Editor editor) {
+	public ThreadedTreeMaker(SketchOutlinePanel frame, Editor editor) {
 		treeMaker = new TreeMaker(editor);
 		this.frame = frame;
 
 	}
 
-	public ThreadedTreeMaker(String path, SketchOutlineFrame frame) {
+	public ThreadedTreeMaker(String path, SketchOutlinePanel frame) {
 		treeMaker = new TreeMaker(path);
 		this.frame = frame;
 
