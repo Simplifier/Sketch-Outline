@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/lib/javaparser-1.0.8.jar!/" />
+    <libelement value="file://C:/Users/QuarkNinja.XQ/processing-read-only/build/windows/work/core/library/core.jar" />
+    <libelement value="file://C:/Users/QuarkNinja.XQ/processing-read-only/build/windows/work/lib/pde.jar" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.core.contenttype_3.4.100.v20110423-0524.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.core.jobs_3.5.100.v20110404.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.core.resources_3.7.100.v20110510-0712.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.core.runtime_3.7.0.v20110110.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.equinox.common_3.6.0.v20110523.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.equinox.preferences_3.4.1.R37x_v20110725.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.jdt.core_3.7.1.v_B76_R37x.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.osgi_3.7.1.R37x_v20110808-1106.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.text_3.5.101.r371_v20110810-0800.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/data" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/data" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="javaparser-1.0.8.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/javaparser-1.0.8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://E:/Program Files/javaparser-1.0.8/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.contenttype_3.4.100.v20110423-0524.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.core.contenttype_3.4.100.v20110423-0524.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.jobs_3.5.100.v20110404.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.core.jobs_3.5.100.v20110404.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.resources_3.7.100.v20110510-0712.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.core.resources_3.7.100.v20110510-0712.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.runtime_3.7.0.v20110110.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.core.runtime_3.7.0.v20110110.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.equinox.common_3.6.0.v20110523.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.equinox.common_3.6.0.v20110523.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.equinox.preferences_3.4.1.R37x_v20110725.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.equinox.preferences_3.4.1.R37x_v20110725.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.jdt.core_3.7.1.v_B76_R37x.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.jdt.core_3.7.1.v_B76_R37x.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.osgi_3.7.1.R37x_v20110808-1106.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.osgi_3.7.1.R37x_v20110808-1106.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.text_3.5.101.r371_v20110810-0800.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.text_3.5.101.r371_v20110810-0800.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="core" level="project" />
+  </component>
+</module>
