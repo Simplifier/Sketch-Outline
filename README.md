@@ -15,7 +15,7 @@ Grab the latest version from [here](https://github.com/Simplifier/Sketch-Outline
 ## Installation
 
 1. You need Processing 3.0 or later ([http://www.processing.org/download/](http://www.processing.org/download/))
-2. Download the latest version of Sketch Outline from [here](https://github.com/Simplifier/Sketch-Outline/tree/master/distribution).
+2. Download the latest version of Sketch Outline from [here](https://github.com/Simplifier/Sketch-Outline/raw/master/distribution/SketchOutline-0.2.0/download/SketchOutline-0.2.0.zip). Or you can choose one of the [previous releases](https://github.com/Simplifier/Sketch-Outline/tree/master/distribution)
 3. If not already present, create a folder named "tools" inside your Sketchbook folder. (The location of the sketchbook folder is shown in Processing's Preferences dialog)
 4. Extract the contents of the downloaded .zip into the tools folder.
 5. Restart Processing.
